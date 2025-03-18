@@ -16,20 +16,20 @@ def test_calc():
     assert a1.calc(10,0,"divide") == "You can't divide by 0!"
     assert a1.calc("first", "second", "multiply") == "You can't multiply those values!"
 
-# def test_data_type_conversion():
-#     result = a1.data_type_conversion("110", "int")
-#     assert type(result).__name__ == "int"
-#     assert result == 110
-#     result = a1.data_type_conversion("5.5", "float")
-#     assert type(result).__name__ == "float"
-#     assert result == 5.5
-#     result = a1.data_type_conversion(7,"float")
-#     assert type(result).__name__ == "float"
-#     assert result == 7.0
-#     result = a1.data_type_conversion(91.1,"str")
-#     assert type(result).__name__ == "str"
-#     assert result == "91.1"
-#     assert a1.data_type_conversion("banana", "int") == "You can't convert banana into a int."
+def test_data_type_conversion():
+    result = a1.data_type_conversion("110", "int")
+    assert type(result).__name__ == "int"
+    assert result == 110
+    result = a1.data_type_conversion("5.5", "float")
+    assert type(result).__name__ == "float"
+    assert result == 5.5
+    result = a1.data_type_conversion(7,"float")
+    assert type(result).__name__ == "float"
+    assert result == 7.0
+    result = a1.data_type_conversion(91.1,"str")
+    assert type(result).__name__ == "str"
+    assert result == "91.1"
+    assert a1.data_type_conversion("banana", "int") == "You can't convert banana into a int."
 
 def test_grade():
     assert a1.grade(75,85,95) == "B"
@@ -47,8 +47,8 @@ def test_titleize():
     assert a1.titleize("a separate peace") == "A Separate Peace"
     assert a1.titleize("after on") == "After On"
 
-# def test_hangman():
-#     assert a1.hangman("difficulty","ic") == "_i__ic____"
+def test_hangman():
+    assert a1.hangman("difficulty","ic") == "_i__ic____"
 
 def test_pig_latin():
     assert a1.pig_latin("apple") == "appleay"

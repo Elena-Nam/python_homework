@@ -50,9 +50,9 @@ def data_type_conversion(value, type):
     elif type == "str":
         return str(value)   
     else:
-       print(f"The non-converted value:", {type})
-   except ValueError:
-    print(f"You can't convert {value} into a {type}")
+       return f"The non-converted value:", {type}
+   except (ValueError, TypeError):
+    return f"You can't convert {value} into a {type}."
 
 print("Task 4:", data_type_conversion(123, "float"))
 
@@ -124,20 +124,16 @@ print("Task 8:", titleize("to be, or not to be"))
 
 # Task 9
 def hangman(secret, guess):
-    for i, letter in enumerate(secret):
-        if guess not in secret:
-            guess == "_"
-            return secret + guess
-        else: 
-            return secret
+    guessed_word = ""
+    for letter in secret:
+        if letter in guess:
+            guessed_word += letter  
+        else:
+            guessed_word += "_"
+    return guessed_word
 
+print("Task 9:", hangman("alphabet", "abc"))
 
-print(hangman("alphabet", "a"))
-
-
-
-        
-    
 
 # Task 10
 def pig_latin(word):
