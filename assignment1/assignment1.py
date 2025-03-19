@@ -136,21 +136,31 @@ print("Task 9:", hangman("alphabet", "abc"))
 
 
 # Task 10
-def pig_latin(word):
+def pig_latin(sentence):
     vowels = "aeiou"
-    if word[0].lower() in vowels:
-        return word + "ay"
-    elif word[:2].lower() == "qu":
-        return word[2:] + "quay"
-    else:
-        for i, letter in enumerate(word):
-            if letter.lower() in vowels:
-                return word[i:] + word[:i] + "ay"
-        return word + "ay"
+    pig_latin_words = []
+    try:
+        words = sentence.lower().split()
+        for word in words:
+            if word[0] in vowels:
+                pig_latin_words.append(word + "ay")
+            elif word.startswith("qu"):
+                pig_latin_words.append(word[2:] + "quay") 
+            elif word[1:3] == "qu":
+                pig_latin_words.append(word[3:] + word[:3] + "ay")
+            else:
+                for i, char in enumerate(word):
+                    if char in vowels:
+                        pig_latin_words.append(word[i:] + word[:i] + "ay")
+                        break
+                    
+        return " ".join(pig_latin_words)
+    except Exception as e:
+        return f"An error occured: {str(e)}"
 
-
+    
 print("Task 10:", pig_latin("apple"))
 print("Task 10:", pig_latin("banana"))
 print("Task 10:", pig_latin("queue"))
 print("Task 10:", pig_latin("clock"))
-print("Task 10:", pig_latin("square")) # can't find the solution
+print("Task 10:", pig_latin("square")) 
