@@ -31,8 +31,8 @@ task2_employees = pd.read_csv("employees.csv")
 print("\n", 'Task 2:' , task2_employees)
 
 # Read data from a JSON file:
-# !!! I got FileNotFoundError when reading just the name of JSON file, so I used absolute path!!! 
-json_employees = pd.read_json(r"C:\Users\Vasya\ctd\python\python_homework\assignment3\additional_employees.json")
+
+json_employees = pd.read_json("additional_employees.json")
 print("\n", json_employees)
 
 # Combine DataFrames:
@@ -58,8 +58,8 @@ print("\n", more_employees.info())
 
 
 # Task 4: Data Cleaning
-# Task 4.1 !!! the same error reading the file !!!
-dirty_data = pd.read_csv(r"C:\Users\Vasya\ctd\python\python_homework\assignment3\dirty_data.csv")
+# Task 4.1 
+dirty_data = pd.read_csv("dirty_data.csv")
 print("\n", dirty_data)
 
 clean_data = dirty_data.copy()
