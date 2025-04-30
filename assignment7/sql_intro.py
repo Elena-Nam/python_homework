@@ -44,7 +44,7 @@ def add_subscription(cursor, subscriber_name, magazine_name):
     else:
         print("Subscriber or magazine not found.")
 
-with sqlite3.connect("./db/magazines.db") as conn:
+with sqlite3.connect("../db/magazines.db") as conn:
     conn.execute("PRAGMA foreign_keys = 1")  
     cursor = conn.cursor()
 
@@ -118,7 +118,7 @@ try:
     cursor.execute('SELECT * From Subscribers')
     subscribers = cursor.fetchall()
     for subscriber in subscribers:
-        print(subscriber)
+        print("All Subscribers: \n", subscriber)
 except sqlite3.Error as e:
     print(f"Error retrieving subscribers: {e}")  
 
@@ -128,7 +128,7 @@ try:
     magazines = cursor.fetchall()
     print("\n")
     for magazine in magazines:
-        print(magazine)
+        print("All magazines: \n", magazine)
 except sqlite3.Error as e:
             print(f"Error retrieving magazines: {e}")
 
@@ -144,7 +144,7 @@ try:
     results = cursor.fetchall()
     print("\n")
     for row in results:
-        print(row)
+        print("Magazines for a particular publisher: \n", row)
 except sqlite3.Error as e:
             print(f"Error retrieving magazines for publisher: {e}")
 
