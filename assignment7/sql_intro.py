@@ -117,8 +117,9 @@ with sqlite3.connect("../db/magazines.db") as conn:
 try:
     cursor.execute('SELECT * From Subscribers')
     subscribers = cursor.fetchall()
+    print("All Subscribers:")
     for subscriber in subscribers:
-        print("All Subscribers: \n", subscriber)
+        print(subscriber)
 except sqlite3.Error as e:
     print(f"Error retrieving subscribers: {e}")  
 
@@ -126,9 +127,9 @@ except sqlite3.Error as e:
 try:
     cursor.execute('SELECT * From Magazines ORDER BY magazine_name')
     magazines = cursor.fetchall()
-    print("\n")
+    print("All magazines:")
     for magazine in magazines:
-        print("All magazines: \n", magazine)
+        print(magazine)
 except sqlite3.Error as e:
             print(f"Error retrieving magazines: {e}")
 
@@ -142,9 +143,9 @@ try:
         WHERE Publishers.publisher_name = 'Oxford University';
     """)
     results = cursor.fetchall()
-    print("\n")
+    print("\nMagazines for publisher 'Oxford University':")
     for row in results:
-        print("Magazines for a particular publisher: \n", row)
+        print(row[0]) 
 except sqlite3.Error as e:
             print(f"Error retrieving magazines for publisher: {e}")
 
