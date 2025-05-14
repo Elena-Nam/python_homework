@@ -26,3 +26,4 @@ with sqlite3.connect("../db/lesson.db") as conn:
     sorted_df.to_csv( 'order_summary.csv', index=False)
 
     print(f"Data has been written")
+    
