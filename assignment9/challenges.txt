@@ -1,0 +1,2 @@
+I did not face much difficulty in finding the data , as it was clearly structured and labeled.
+the main challenge I encountered was in writing the code to correctly scrape the data using Selenium. 

@@ -1,0 +1,124 @@
+
+Question 1. Which sections of the website are restricted for crawling?
+Answer:
+User-agent: *
+Disallow: /w/
+Disallow: /api/
+Disallow: /trap/
+Disallow: /wiki/Special:
+Disallow: /wiki/Spezial:
+Disallow: /wiki/Spesial:
+Disallow: /wiki/Special%3A
+Disallow: /wiki/Wikipedia%3A
+Disallow: /wiki/Wikipedia:Articles_for_deletion/
+Disallow: /wiki/Wikipedia:Requests_for_adminship
+Disallow: /wiki/Wikipedia:Requests_for_arbitration
+Disallow: /wiki/Wikipedia:Articles_for_creation
+Disallow: /wiki/Wikipedia:Copyright_problems
+Disallow: /wiki/MediaWiki:Spam-blacklist
+Disallow: /wiki/Wikipedia:Articles_for_deletion
+Disallow: /wiki/Wikipedia:Requests_for_undeletion
+Disallow: /wiki/Wikipedia:Requests_for_move
+Disallow: /wiki/Wikipedia:WikiProject
+Disallow: /wiki/Wikipedia:Template_messages
+Disallow: /wiki/Wikipedia:Wikipedia
+Disallow: /wiki/MediaWiki:Spam-blacklist
+Disallow: /wiki/Wikipedia%3AArticles_for_creation
+Disallow: /wiki/Wikipedia:Requests_for_undeletion
+Disallow: /wiki/Wikipedia%3ARequests_for_move
+Disallow: /wiki/Wikipedia%3ARequests_for_arbitration
+Disallow: /wiki/Wikipedia%3ARequests_for_deletion
+
+# Disallow specific crawlers
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: UbiCrawler
+Disallow: /
+
+User-agent: Zao
+Disallow: /
+
+User-agent: HTTrack
+Disallow: /
+
+User-agent: WebStripper
+Disallow: /
+
+User-agent: Teleport
+Disallow: /
+
+User-agent: WebZIP
+Disallow: /
+
+User-agent: NPBot
+Disallow: /
+
+User-agent: fast
+Disallow: /
+
+User-agent: wget
+Disallow: /
+
+User-agent: grub-client
+Disallow: /
+
+User-agent: larbin
+Disallow: /
+
+User-agent: Download Ninja
+Disallow: /
+
+User-agent: *
+Allow: /w/api.php?action=mobileview&
+Allow: /w/load.php?
+Allow: /api/rest_v1/?doc
+
+
+Question 2. Are there specific rules for certain user agents?
+Answer:
+# Disallow specific crawlers
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: UbiCrawler
+Disallow: /
+
+User-agent: Zao
+Disallow: /
+
+User-agent: HTTrack
+Disallow: /
+
+User-agent: WebStripper
+Disallow: /
+
+User-agent: Teleport
+Disallow: /
+
+User-agent: WebZIP
+Disallow: /
+
+User-agent: NPBot
+Disallow: /
+
+User-agent: fast
+Disallow: /
+
+User-agent: wget
+Disallow: /
+
+User-agent: grub-client
+Disallow: /
+
+User-agent: larbin
+Disallow: /
+
+User-agent: Download Ninja
+Disallow: /
+
+Question 3. 
+why websites use robots.txt and write 2-3 sentences explaining its purpose and how it promotes ethical scraping
+
+Answer: the purpose is to prevent overloading servers, protect sensitive content, and ensure that web scraping is done ethically by following the website’s preferences.
+Following the robots.txt guidelines, ethical scraping respects the website's boundaries, minimizes unwanted traffic, and helps maintain a good relationship between website owners and crawlers.
